@@ -1,5 +1,5 @@
-from database.mongodb import AsyncIOMotorClient
-from schemas.ip import IpResponse
+from ..database.mongodb import AsyncIOMotorClient
+from ..schemas.ip import IpResponse
 from ipaddress import ip_address, ip_network
 from aiocsv import AsyncWriter
 

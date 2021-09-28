@@ -1,14 +1,14 @@
 from fastapi import APIRouter, Header, Depends, HTTPException
-from database.mongodb import AsyncIOMotorClient, get_database
-from schemas.ip import IpResponse, IpHomeCheck
-from schemas.distance import DistanceResponse
-from schemas.position import PositionAvg
+from ..database.mongodb import AsyncIOMotorClient, get_database
+from ..schemas.ip import IpResponse, IpHomeCheck
+from ..schemas.distance import DistanceResponse
+from ..schemas.position import PositionAvg
 from datetime import datetime
 from re import search
 
-from config.async_utils import create_new_ip_row, exists_ip, get_ip_data, is_aws, update_ip, csv_log
-from config.utils import calculate_distance
-from config.distance import verify_distance
+from ..config.async_utils import create_new_ip_row, exists_ip, get_ip_data, is_aws, update_ip, csv_log
+from ..config.utils import calculate_distance
+from ..config.distance import verify_distance
 
 api = APIRouter()
 regex_validator = r"\b((?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:(?<!\.)\b|\.)){4}"

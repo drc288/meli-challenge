@@ -1,4 +1,4 @@
-from schemas.distance import DistanceResponse
+from ..schemas.distance import DistanceResponse
 
 
 def verify_distance(element01: dict, element02: dict):
