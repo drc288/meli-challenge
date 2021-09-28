@@ -1,7 +1,7 @@
 from .database.mongodbutils import close_mongodb_connection, connect_mongodb
+from .api.api import api
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
-from api.api import api
 
 app = FastAPI(title="meli challenge", description="mercado libre challenge", version="0.0.1")
 
