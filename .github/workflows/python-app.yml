@@ -26,3 +26,4 @@ jobs:
     - name: start server and run postman
       run: |
         uvicorn app.main:app &
+        ./test/postman/run-api-test.py
