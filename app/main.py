@@ -1,4 +1,4 @@
-from .database.mongodbutils import close_mongodb_connection, connect_mongodb
+from database.mongodbutils import close_mongodb_connection, connect_mongodb
 from .api.api import api
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
