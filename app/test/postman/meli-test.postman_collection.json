@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "93571ceb-6691-42cd-a2a8-261bda46811c",
+		"name": "meli-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Assert country\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.pais).to.eql(\"united states\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user-id",
+						"value": "test user",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "0.0.0.0:8000/ip/8.8.8.8",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"ip",
+						"8.8.8.8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "closeDistance",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 400ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);",
+							"});",
+							"",
+							"pm.test(\"united state assert\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.pais).to.eql(\"united states\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "0.0.0.0:8000/closeDistance/",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"closeDistance",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "farDistance",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 400ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);",
+							"});",
+							"",
+							"pm.test(\"china assert\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.pais).to.eql(\"china\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "0.0.0.0:8000/farDistance/",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"farDistance",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "avgPosition",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "0.0.0.0:8000/avgPosition/china",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"avgPosition",
+						"china"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
