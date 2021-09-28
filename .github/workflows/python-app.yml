@@ -25,5 +25,6 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: start server and run postman
       run: |
+        pwd
         uvicorn app.main:app &
         ./app/test/postman/run-api-test.py
