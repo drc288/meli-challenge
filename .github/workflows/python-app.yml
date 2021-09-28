@@ -27,4 +27,4 @@ jobs:
       run: |
         pwd
         uvicorn app.main:app &
-        ./app/test/postman/run-api-test.py
+        ./app/test/postman/run-api-test.sh
