@@ -48,7 +48,7 @@ Rx==1.6.1
 six==1.16.0
 sniffio==1.2.0
 SQLAlchemy==1.4.25
-starlette==0.14.2
+starlette==0.25.0
 toml==0.10.2
 typing-extensions==3.10.0.2
 ujson==4.2.0
