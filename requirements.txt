@@ -52,7 +52,7 @@ starlette==0.14.2
 toml==0.10.2
 typing-extensions==3.10.0.2
 ujson==4.2.0
-urllib3==1.26.7
+urllib3==1.26.18
 uvicorn==0.13.4
 uvloop==0.16.0
 watchgod==0.7
